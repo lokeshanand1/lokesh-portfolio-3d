@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-base: #0a0a0f;
+    --accent-primary: #ffffff;
+    --accent-secondary: #94a3b8;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-base);
+    color: white;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow: hidden; /* Hide scrollbars since we use R3F ScrollControls */
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/[0.03] backdrop-blur-2xl border border-white/[0.08] shadow-[0_8px_32px_rgba(0,0,0,0.4)];
+  }
+  
+  .glass-nav {
+    @apply bg-black/60 backdrop-blur-xl border-b border-white/10;
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255,255,255,0.3);
+  }
+}

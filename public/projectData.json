@@ -1,0 +1,52 @@
+[
+  {
+    "id": "p1",
+    "title": "Brain Tumor Classification Using DenseNet-121",
+    "meta": "Deep Learning + Transfer Learning + Explainable AI",
+    "short": "Implemented transfer learning for three-class brain tumor classification.",
+    "bullets": [
+      "Implemented transfer learning using DenseNet-121 for three-class brain tumor classification (meningioma, glioma, pituitary).",
+      "Trained and validated on 3,064 contrast-enhanced T1-weighted MRI images with stratified 80-20 split.",
+      "Achieved 93.5% best validation accuracy using Adam optimizer, outperforming RMSprop (90.7%).",
+      "Surpassed baseline CNN models (70-85% validation accuracy range).",
+      "Applied focal loss (γ = 2, α = 0.25), dropout (0.5), and systematic hyperparameter tuning for improved generalization.",
+      "Optimized batch size (10) and learning rate scheduling for stable convergence.",
+      "Integrated Grad-CAM to generate interpretable heatmaps highlighting tumor regions influencing classification decisions.",
+      "Evaluated performance using precision, recall, F1-score, ROC-AUC, and confusion matrix analysis."
+    ],
+    "tags": ["Python", "PyTorch", "DenseNet-121", "Grad-CAM"],
+    "modelType": "sphere"
+  },
+  {
+    "id": "p2",
+    "title": "Intelligent Odor Sensing and ML-Driven Perfume Dispensing System",
+    "meta": "AI + Sensor Modeling + Embedded Control",
+    "short": "Multi-sensor VOC detection and automated dispensing.",
+    "bullets": [
+      "Designed multi-sensor electronic nose architecture for VOC detection.",
+      "Applied PCA-based dimensionality reduction reducing input dimensionality by 67.9% while retaining 99% variance.",
+      "Developed ML regression model achieving MAE of 0.04 mL on fragrance composition prediction.",
+      "Implemented normalization and calibration pipeline to mitigate sensor drift and improve prediction stability across samples.",
+      "Integrated Python ML pipeline with Arduino-based actuation system for automated volumetric dispensing.",
+      "Engineered complete sensing -> inference -> mechanical execution pipeline."
+    ],
+    "tags": ["Python", "PCA", "Sensors", "Arduino", "Actuation"],
+    "modelType": "icosahedron"
+  },
+  {
+    "id": "p3",
+    "title": "Machine Learning Assisted Vehicular Visible Light Communication (VLC)",
+    "meta": "Optical Communication + Adaptive Signal Processing",
+    "short": "LED–photodiode based VLC prototype for V2V communication.",
+    "bullets": [
+      "Developing LED-photodiode based VLC prototype for vehicle-to-vehicle (V2V) communication.",
+      "Modeling real-world channel impairments including ambient light interference, motion-induced distortion, and alignment variability.",
+      "Designing ML-based adaptive thresholding algorithms to improve signal detection reliability under dynamic conditions.",
+      "Extracting temporal and intensity-domain signal features for noise-resilient classification.",
+      "Conducting controlled hardware experiments to evaluate bit error rate (BER) performance.",
+      "Currently optimizing robustness and real-time inference performance for dynamic vehicular environments."
+    ],
+    "tags": ["VLC", "ESP32", "Arduino", "ML"],
+    "modelType": "torus"
+  }
+]
