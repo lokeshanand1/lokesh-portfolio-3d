@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <rect width="400" height="240" fill="#1a0a14"/>
+  <polygon points="200,50 270,90 270,150 200,190 130,150 130,90" fill="none" stroke="#f472b6" stroke-width="3"/>
+  <text x="200" y="225" text-anchor="middle" fill="#fbcfe8" font-family="monospace" font-size="14">Your project</text>
+</svg>

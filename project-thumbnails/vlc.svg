@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="v" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" style="stop-color:#4c1d95"/>
+      <stop offset="100%" style="stop-color:#020617"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#v)"/>
+  <line x1="40" y1="120" x2="360" y2="120" stroke="#e879f9" stroke-width="4" opacity="0.9"/>
+  <circle cx="100" cy="120" r="12" fill="#f0abfc"/>
+  <circle cx="300" cy="120" r="10" fill="#c026d3"/>
+  <text x="200" y="220" text-anchor="middle" fill="#f0abfc" font-family="monospace" font-size="14">VLC · V2V · Adaptive ML</text>
+</svg>

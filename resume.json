@@ -1,0 +1,58 @@
+{
+  "basics": {
+    "name": "Lokesh Anand",
+    "label": "B.Tech, Electronics and Communication Engineering",
+    "summary": "Undergraduate researcher and builder focused on intelligent sensing systems, embedded AI, and machine learning for physical systems. Experienced in developing end-to-end cyber-physical solutions integrating signal processing, ML inference, and hardware actuation, along with deploying real-world systems involving web platforms, automation workflows, and user-facing applications.",
+    "email": "lokesh@ece.du.ac.in",
+    "phone": "+91-8168012831"
+  },
+  "work": [
+    {
+      "company": "Campus Careers India",
+      "position": "Founding Team Member & Director (Tech & Growth)",
+      "startDate": "Nov 2025",
+      "endDate": "Feb 2026",
+      "link": "campuscareersindia.com",
+      "highlights": [
+        "Built and deployed the company website from scratch, managing end-to-end setup including domain, hosting, and configuration.",
+        "Implemented SEO fundamentals such as keyword structuring, metadata optimization, and search engine indexing to establish initial online presence.",
+        "Designed and managed lead acquisition workflows for capturing and processing user inquiries.",
+        "Developed and deployed n8n-based automation pipelines for lead routing, follow-ups, and coordination with on-ground consultation teams.",
+        "Led early-stage hiring by sourcing, evaluating, and onboarding candidates through LinkedIn for operational roles.",
+        "Collaborated on structuring service offerings including career guidance, banking jobs and study abroad support."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Delhi - Faculty of Technology",
+      "area": "B.Tech, Electronics and Communication Engineering",
+      "startDate": "2023",
+      "endDate": "Present"
+    },
+    {
+      "institution": "University of Delhi",
+      "area": "Minor Degree in Artificial Intelligence and Machine Learning",
+      "startDate": "2023",
+      "endDate": "Present"
+    },
+    {
+      "institution": "CBSE Class XII",
+      "area": "High School (85%)",
+      "startDate": "2022",
+      "endDate": "2022"
+    },
+    {
+      "institution": "CBSE Class X",
+      "area": "Secondary School (94%)",
+      "startDate": "2020",
+      "endDate": "2020"
+    }
+  ],
+  "skills": [
+    "Python", "Java", "C++", "MATLAB", "Assembly Language", "SQL",
+    "Scikit-learn", "NumPy", "Pandas",
+    "Arduino", "ESP32", "Raspberry Pi", "Stepper Motor Control", "Serial Communication",
+    "Data Structures", "Silvaco TCAD", "Ansys HFSS", "Ni Multisim", "LTspice", "Azure", "MySQL", "MongoDB", "Power BI", "Bash", "OpenCV", "AutoCAD", "Git"
+  ]
+}
