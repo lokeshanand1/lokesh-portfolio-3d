@@ -43,39 +43,41 @@ export default function App() {
               {/* Hero Borderline Mounting Frame - scrolls up and disappears naturally */}
               <div className="absolute top-6 left-6 md:top-10 md:left-10 md:right-10 w-[calc(100vw-3rem)] md:w-auto h-[calc(100vh-3rem)] md:h-[calc(100vh-5rem)] border border-white/15 rounded-[3rem] pointer-events-none z-0 opacity-70 shadow-[inset_0_0_80px_rgba(255,255,255,0.02)]" />
 
-              <div className="w-full relative pointer-events-none flex flex-col pt-[25vh] pb-[20vh] gap-[30vh] z-10">
+              <div className="w-full relative pointer-events-none flex flex-col pt-[15vh] md:pt-[25vh] pb-[20vh] gap-[20vh] md:gap-[30vh] z-10">
 
                 {/* Hero Section */}
-                <section className="flex flex-col justify-center items-start px-10 md:px-24 w-full min-h-[50vh]">
+                <section className="flex flex-col justify-center items-start px-6 md:px-24 w-full min-h-[50vh]">
                   <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     viewport={{ once: true, amount: 0.3 }}
-                    className="p-10 max-w-5xl pointer-events-auto flex flex-col md:flex-row items-center md:justify-between gap-10 md:gap-24"
+                    className="px-2 py-6 md:p-10 max-w-5xl pointer-events-auto flex flex-col-reverse md:flex-row items-center md:items-start md:justify-between gap-8 md:gap-24"
                   >
-                    <div className="flex-1 md:max-w-2xl">
+                    <div className="flex-1 md:max-w-2xl text-center md:text-left mt-2 md:mt-0">
                       <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight text-white text-glow">
                         {resumeData.basics.name}
                       </h1>
                       <h2 className="text-xl md:text-2xl font-light text-gray-300 mb-2 tracking-wide">
                         {resumeData.basics.label}
                       </h2>
-                      <h3 className="text-lg md:text-xl font-medium text-gray-400 mb-6 tracking-wider uppercase">
+                      <h3 className="text-base md:text-xl font-medium text-gray-400 mb-6 tracking-wider uppercase">
                         University of Delhi
                       </h3>
-                      <p className="text-lg text-gray-400 font-light leading-relaxed">
-                        {resumeData.basics.summary}
-                      </p>
+                      <div className="mt-4 md:mt-8 p-5 md:p-8 text-left rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-md shadow-[0_0_30px_rgba(255,255,255,0.02)] group-hover:border-white/20 transition-colors duration-500">
+                        <p className="text-lg text-gray-400 font-light leading-relaxed">
+                          {resumeData.basics.summary}
+                        </p>
+                      </div>
                     </div>
 
                     <div className="flex-shrink-0 relative group md:ml-12">
                       <div className="absolute inset-0 bg-white/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                       <div className="relative p-2 md:p-3 rounded-full border border-white/10 bg-white/[0.02] backdrop-blur-md shadow-[0_0_40px_rgba(255,255,255,0.05)] z-10 transition-all duration-700 group-hover:border-white/30 group-hover:bg-white/[0.05]">
-                        <img
-                          src="./profile.jpg"
-                          alt="Lokesh"
-                          className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border border-white/20"
+                        <img 
+                          src="./profile.jpg" 
+                          alt="Lokesh" 
+                          className="w-36 h-36 md:w-64 md:h-64 object-cover rounded-full border border-white/20"
                         />
                       </div>
                     </div>
