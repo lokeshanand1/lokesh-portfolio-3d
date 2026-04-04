@@ -73,7 +73,7 @@ export default function App() {
                       <div className="absolute inset-0 bg-white/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                       <div className="relative p-2 md:p-3 rounded-full border border-white/10 bg-white/[0.02] backdrop-blur-md shadow-[0_0_40px_rgba(255,255,255,0.05)] z-10 transition-all duration-700 group-hover:border-white/30 group-hover:bg-white/[0.05]">
                         <img
-                          src="/profile.jpg"
+                          src="./profile.jpg"
                           alt="Lokesh"
                           className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border border-white/20"
                         />
