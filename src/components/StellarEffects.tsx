@@ -3,23 +3,23 @@ import { Sparkles } from '@react-three/drei';
 export function StellarEffects() {
   return (
     <group>
-      {/* Premium ambient stardust to provide microscopic depth and slow motion to the background */}
+      {/* Deep atmospheric cinematic dust */}
       <Sparkles 
-        count={500} 
-        scale={20} 
-        size={2} 
-        speed={0.2} 
-        opacity={0.4} 
+        count={300} 
+        scale={35} 
+        size={1.5} 
+        speed={0.05} 
+        opacity={0.3} 
         color="#ffffff" 
-        noise={0.5}
+        noise={1.5}
       />
       <Sparkles 
-        count={200} 
-        scale={15} 
-        size={5} 
-        speed={0.1} 
-        opacity={0.1} 
-        color="#94a3b8" 
+        count={150} 
+        scale={25} 
+        size={3} 
+        speed={0.02} 
+        opacity={0.15} 
+        color="#00f3ff" 
       />
     </group>
   );

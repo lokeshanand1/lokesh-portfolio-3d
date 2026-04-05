@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --bg-base: #0a0a0f;
+    --bg-base: #020204; /* Deeper black for Active Theory vibe */
     --accent-primary: #ffffff;
     --accent-secondary: #94a3b8;
   }
@@ -25,13 +25,18 @@
     background-color: var(--bg-base);
     color: white;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    overflow: hidden; /* Hide scrollbars since we use R3F ScrollControls */
+    overflow: hidden;
+    cursor: none !important;
+  }
+
+  a, button, [role="button"] {
+    cursor: none !important;
   }
 }
 
 @layer utilities {
   .glass-panel {
-    @apply bg-white/[0.03] backdrop-blur-2xl border border-white/[0.08] shadow-[0_8px_32px_rgba(0,0,0,0.4)];
+    @apply bg-[#050510]/50 backdrop-blur-2xl border border-white/[0.05] shadow-[0_8px_32px_rgba(0,0,0,0.6)];
   }
   
   .glass-nav {
@@ -40,5 +45,9 @@
   
   .text-glow {
     text-shadow: 0 0 20px rgba(255,255,255,0.3);
+  }
+
+  .interactive-hover {
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   }
 }

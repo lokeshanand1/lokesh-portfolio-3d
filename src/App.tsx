@@ -1,9 +1,10 @@
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { ScrollControls, Scroll, Loader } from '@react-three/drei';
-import { EffectComposer, Bloom, Vignette } from '@react-three/postprocessing';
-import { ChaosScene } from './components/ChaosScene';
+import { EffectComposer, Bloom, Vignette, Noise } from '@react-three/postprocessing';
+import { FluidBackground } from './components/FluidBackground';
 import { ParticleTsunami } from './components/ParticleTsunami';
+import { CustomCursor } from './components/CustomCursor';
 // Removed procedural 3D models per user request
 import { ResumeRibbon } from './components/ResumeRibbon';
 import { SkillCloud } from './components/SkillCloud';
@@ -18,21 +19,22 @@ export default function App() {
   const particlesEnabled = useAppStore((state) => state.particlesEnabled);
 
   return (
-    <div className="w-screen h-screen bg-[#050510] overflow-hidden">
+    <div className="w-screen h-screen bg-[#020204] overflow-hidden">
+      <CustomCursor />
       <Canvas
         camera={{ position: [0, 0, 10], fov: 75 }}
         gl={{ antialias: false, powerPreference: "high-performance" }}
         dpr={[1, 2]}
       >
-        <color attach="background" args={['#0a0a0f']} />
-        <fog attach="fog" args={['#0a0a0f', 8, 30]} />
+        <color attach="background" args={['#020204']} />
+        <fog attach="fog" args={['#020204', 8, 30]} />
 
         <Suspense fallback={null}>
           <ScrollControls pages={11} damping={0.15} distance={1.2}>
 
             {/* The 3D World */}
             <StellarEffects />
-            <ChaosScene />
+            <FluidBackground />
             {particlesEnabled && <ParticleTsunami count={4000} />}
             {/* 3D project models removed, replaced by 2D HTML images */}
             <ResumeRibbon />
@@ -41,7 +43,7 @@ export default function App() {
             {/* The 2D Overlay linked to Scroll */}
             <Scroll html style={{ width: '100vw' }}>
               {/* Hero Borderline Mounting Frame - scrolls up and disappears naturally */}
-              <div className="absolute top-6 left-6 md:top-10 md:left-10 md:right-10 w-[calc(100vw-3rem)] md:w-auto h-[calc(100vh-3rem)] md:h-[calc(100vh-5rem)] border border-white/15 rounded-[3rem] pointer-events-none z-0 opacity-70 shadow-[inset_0_0_80px_rgba(255,255,255,0.02)]" />
+              <div className="absolute top-6 left-6 md:top-10 md:left-10 md:right-10 w-[calc(100vw-3rem)] md:w-auto h-[calc(100vh-3rem)] md:h-[calc(100vh-5rem)] border border-white/5 rounded-2xl md:rounded-3xl pointer-events-none z-0 opacity-80 shadow-[inset_0_0_100px_rgba(255,255,255,0.01)]" />
 
               <div className="w-full relative pointer-events-none flex flex-col pt-[25vh] pb-[20vh] gap-[30vh] z-10">
 
@@ -114,7 +116,7 @@ export default function App() {
                           whileInView={{ opacity: 1, scale: 1, y: 0 }}
                           transition={{ duration: 0.7, type: "spring", bounce: 0.4 }}
                           viewport={{ once: false, amount: 0.4 }}
-                          className="glass-panel p-10 rounded-2xl w-full pointer-events-auto text-left hover:border-white/30 transition-colors"
+                          className="glass-panel p-10 rounded-xl w-full pointer-events-auto text-left hover:border-white/40 interactive-hover group-hover:-translate-y-2 group-hover:shadow-[0_20px_40px_rgba(0,243,255,0.1)]"
                         >
                           <h2 className="text-3xl font-bold text-white tracking-tight">{project.title}</h2>
                           <p className="text-gray-400 font-mono text-xs tracking-widest uppercase mb-6 mt-2">{project.meta}</p>
@@ -140,7 +142,7 @@ export default function App() {
                           whileInView={{ opacity: 1, scale: 1, y: 0 }}
                           transition={{ duration: 0.7, type: "spring", bounce: 0.4 }}
                           viewport={{ once: false, amount: 0.4 }}
-                          className="glass-panel p-10 rounded-2xl w-full pointer-events-auto hover:border-white/30 transition-colors"
+                          className="glass-panel p-10 rounded-xl w-full pointer-events-auto interactive-hover hover:border-white/40 group-hover:-translate-y-2 group-hover:shadow-[0_20px_40px_rgba(0,243,255,0.1)]"
                         >
                           <h2 className="text-3xl font-bold text-white tracking-tight">{job.company}</h2>
                           <div className="flex justify-between items-center text-gray-400 font-mono text-xs tracking-wide mb-6 mt-2 border-b border-white/10 pb-4">
@@ -168,7 +170,7 @@ export default function App() {
                         whileInView={{ opacity: 1, scale: 1, y: 0 }}
                         transition={{ duration: 0.7, type: "spring", bounce: 0.4 }}
                         viewport={{ once: false, amount: 0.4 }}
-                        className="glass-panel p-10 rounded-2xl w-full pointer-events-auto text-left hover:border-white/30 transition-colors"
+                        className="glass-panel p-10 rounded-xl w-full pointer-events-auto text-left interactive-hover hover:border-white/40 group-hover:-translate-y-2 group-hover:shadow-[0_20px_40px_rgba(0,243,255,0.1)]"
                       >
                         <h2 className="text-3xl font-bold text-white tracking-tight mb-8">Technical Snapshot</h2>
                         <div className="flex flex-wrap gap-3">
@@ -196,7 +198,7 @@ export default function App() {
                           whileInView={{ opacity: 1, scale: 1, y: 0 }}
                           transition={{ duration: 0.7, type: "spring", bounce: 0.4 }}
                           viewport={{ once: false, amount: 0.5 }}
-                          className="glass-panel p-8 rounded-2xl max-w-2xl w-full text-center pointer-events-auto hover:border-white/30 transition-colors"
+                          className="glass-panel p-8 rounded-xl max-w-2xl w-full text-center pointer-events-auto interactive-hover hover:border-white/40 group-hover:-translate-y-2 group-hover:shadow-[0_20px_40px_rgba(0,243,255,0.1)]"
                         >
                           <h3 className="text-2xl font-bold text-white tracking-tight">{edu.institution}</h3>
                           <p className="text-gray-300 mt-2 font-light">{edu.area}</p>
@@ -221,8 +223,9 @@ export default function App() {
 
         {/* Post Processing Stack */}
         <EffectComposer multisampling={0}>
-          <Bloom luminanceThreshold={0.5} luminanceSmoothing={0.9} height={300} intensity={0.5} />
-          <Vignette eskil={false} offset={0.1} darkness={1.1} />
+          <Bloom luminanceThreshold={0.4} luminanceSmoothing={0.9} height={300} intensity={0.6} />
+          <Noise opacity={0.03} />
+          <Vignette eskil={false} offset={0.1} darkness={1.2} />
         </EffectComposer>
 
       </Canvas>
